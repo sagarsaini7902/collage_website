@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>p1</title>
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #logo img {
+      height: 45px;
+      margin-top: 5px;
+      margin-left: 20px;
+    }
+
+    #logo {
+      margin-left: 10px;
+    }
+
+    #navbar {
+      display: flex;
+      justify-content: space-between;
+      justify-content: space-around;
+      align-items: center;
+      height: 100px;
+      background-color: black;
+    }
+
+    .item {
+      margin-right: 20px;
+      list-style-type: none;
+      display: flex;
+    }
+
+    .item li a {
+      color: white;
+      text-decoration: none;
+      padding: 8px;
+      font-size: 17px;
+    }
+
+    .tag-line {
+      text-align: center;
+      color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      justify-content: center;
+    }
+
+    .tag-line h1 {
+      font-size: 50px;
+    }
+
+    .tag-line p {
+      font-size: 20px;
+      padding: 10px;
+    }
+
+    .tag-line div {
+      padding: 30px;
+    }
+
+    .tag-line div a {
+      text-decoration: none;
+      color: white;
+      border: 2px solid white;
+      border-radius: 4px;
+      padding: 8px 20px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .item li a:hover {
+      color: #f44336;
+    }
+
+    .tag-line div a:hover {
+      background-color: black;
+    }
+
+    .l_item i {
+      display: none;
+    }
+
+    #navbar i {
+      display: none;
+    }
+
+    @media(max-width:700px) {
+      .tag-line h1 {
+        font-size: 30px;
+      }
+
+      .item li a:hover {
+        color: white;
+      }
+
+      .item li a {
+        color: white;
+      }
+
+      .tag-line p {
+        font-size: 15px;
+      }
+
+      .tag-line div a {
+        font-size: 10px;
+      }
+
+      .l_item {
+        height: 100%;
+        width: 200px;
+        background-color: #f44336;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+      }
+
+      .item {
+        padding-top: 5px;
+        display: inline-block;
+        margin-top: 10px;
+      }
+
+      .item li {
+        padding-left: 20px;
+        margin-top: 25px;
+        border-radius: 3px;
+      }
+
+      #logo img {
+        height: 25px;
+      }
+
+      .x-icon i {
+        display: inline-block;
+        margin: 10px 7px;
+        color: white;
+        font-size: 25px;
+        padding: 2px 6px;
+      }
+
+      #navbar i {
+        margin-right: 35px;
+        color: white;
+        font-size: 22px;
+        display: block;
+        cursor: pointer;
+      }
+    }
+
+    /*-------------------    Course   -----------------*/
+
+    .course {
+      margin: auto;
+      width: 100%;
+      padding-top: 100px;
+    }
+
+    .c_tag {
+      width: 80%;
+      align-items: center;
+      margin: auto;
+      margin-bottom: 50px;
+    }
+
+    .c_tag h1 {
+      font-size: 36px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .c_tag p {
+      font-size: 14px;
+      color: #777;
+      font-weight: 300;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .row {
+      width: 80%;
+      margin-top: 80px;
+      align-items: center;
+      margin: auto;
+      display: flex;
+    }
+
+    .course-col {
+      background-color: #fff3f3;
+      border-radius: 10px;
+      text-align: center;
+      margin: 10px;
+      padding: 20px;
+      flex-basis: 31%;
+    }
+
+    .course-col h3 {
+      margin-bottom: 10px;
+    }
+
+    .course-col p {
+      color: #777;
+    }
+
+    @media(max-width:700px) {
+      .course {
+        text-align: center;
+      }
+
+
+      .row {
+        display: inline-block;
+      }
+
+      .course-col {
+        margin: 20px;
+        padding: 40px;
+      }
+
+      .course-col h3 {
+        margin-bottom: 20px;
+      }
+
+      .course_column img {
+        margin-bottom: 10px;
+        height: 200px;
+      }
+    }
+
+    .country_row {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<body>
+  <section id="header">
+    <nav id="navbar">
+      <div id="logo">
+        <img src="D:\Users\sagar saini\OneDrive\Desktop\bakwaas\COLLAGE PROJECT\eduford_img\logo.png" alt="logo">
+      </div>
+
+      <div class="l_item" id="Litem">
+
+        <div class="x-icon">
+          <!---------------The below code is for  "CLOSE MENU BAR" through "CROSS MARK"--------------->
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+        </div>
+
+        <ul class="item">
+          <li><a href="home.html">HOME</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="login.html">LOGIN</a></li>
+          <li><a href="help.html">HELP</a></li>
+        </ul>
+      </div>
+      <!-------------The below code is for  "MENU BAR" through "THREE HORIZONTAL LINES"----------->
+      <i class="fas fa-bars" onclick="showMenu()"></i>
+    </nav>
+  </section>
+
+  <!------------Course------------->
+  <section class="course">
+    <div class="c_tag">
+      <h1>About us</h1>
+      <p>We available at 24x7.</p>
+    </div>
+
+    <div class="row">
+
+      <div class="course-col">
+        <h3>Email</h3>
+        <p>sagarsaini7902@gmail.com</p>
+        <p>sagargkv1212@gmail.com</p>
+      </div>
+      <div class="course-col">
+        <h3>Contact Number</h3>
+        <p>Owner - +91-7902099242</p>
+        <p>College - +91-7060929502</p>
+      </div>
+      <div class="course-col">
+        <h3>Address of Hoster</h3>
+        <p>Office- Aplex Complex</p>
+        <p>Area- Bahadrabad, Haridwar</p>
+        <p>ZIP- 249401</p>
+      </div>
+    </div>
+  </section>
+
+
+  </div>
+
+
+
+
+
+
+  <!----------------------java script for tpggle value--------------------->
+  <script>
+
+    var Litem = document.getElementById("Litem");
+    function showMenu() {
+      Litem.style.right = "0";
+    }
+
+    function hideMenu() {
+      Litem.style.right = "-200px";
+    }
+
+  </script>
+</body>
+
+</html>
